@@ -1,0 +1,33 @@
+Date: Wed Dec 29 14:36:14 2021
+
+Total seated tables :1
+ Total Income : 75
+ Total open Income : 0Date: Wed Dec 29 14:47:27 2021
+
+Total seated tables :9
+ Total Income : 355
+ Total open Income : 0Date: Wed Dec 29 14:47:53 2021
+
+Total seated tables :1
+ Total Income : 75
+ Total open Income : 75Date: Wed Dec 29 14:49:07 2021
+
+Total seated tables :1
+ Total Income : 25
+ Total open Income : 0Date: Wed Dec 29 15:26:47 2021
+
+Total seated tables :1
+ Total Income : 50
+ Total open Income : 0Date: Wed Dec 29 15:50:05 2021
+
+Total seated tables :1
+ Total Income : 25
+ Total open Income : 25Date: Wed Dec 29 16:09:58 2021
+
+Total seated tables :1
+ Total Income : 100
+ Total open Income : 100Date: Wed Dec 29 16:16:00 2021
+
+Total seated tables :1
+ Total Income : 250
+ Total open Income : 0

@@ -1,0 +1,5 @@
+C:\Users\Master\source\repos\BarProject\BarProject\x64\Debug\BarProject.vcxproj.GenerateResource.cache
+C:\Users\Master\source\repos\BarProject\BarProject\x64\Debug\BarProject.MyForm.resources
+C:\Users\Master\source\repos\BarProject\BarProject\x64\Debug\BarProject.vcxproj.AssemblyReference.cache
+C:\Users\Master\source\repos\BarProject\BarProject\x64\Debug\BarProject.payWindow.resources
+C:\Users\Master\source\repos\BarProject\BarProject\x64\Debug\BarProject.CreateOrderForm.resources
