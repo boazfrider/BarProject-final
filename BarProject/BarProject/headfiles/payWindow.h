@@ -1,5 +1,11 @@
 #pragma once
 #include "Bar.h"
+
+/*
+*this form represent the pay form. in this form the user enter the amount he want to pay
+*and the functions will sub the amount that the table need to pay.
+*My function is show up almost in the end of the file. all the rest code was created auto by Visual Studio form.
+*/
 namespace BarProject {
 
 	using namespace System;
@@ -10,28 +16,26 @@ namespace BarProject {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Summary for MyForm1
+	/// Summary for payWindow
 	/// </summary>
-	public ref class MyForm1 : public System::Windows::Forms::Form
+	public ref class payWindow : public System::Windows::Forms::Form
 	{
 	public:
 		
-		MyForm1(void)
+		payWindow(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
+			
 		}
-		MyForm1(int num_of_table,Bar* temp)
+		payWindow(int num_of_table,Bar* temp)
 		{
 			InitializeComponent();
 			numOfTable = num_of_table;
 			bar = temp;
-			Table* table = bar->GetTable(numOfTable);
-			int bill = table->getOpenBill();
+			Table* table = bar->GetTable(numOfTable); // get the table which we want to add.
+			int bill = table->getOpenBill(); // get the open bill of the table.
 
-			label1->Text = bill.ToString();
+			label1->Text = bill.ToString(); // represent the bill in the label.
 
 		}
 		
@@ -39,7 +43,7 @@ namespace BarProject {
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		~MyForm1()
+		~payWindow()
 		{
 			if (components)
 			{
@@ -86,7 +90,7 @@ namespace BarProject {
 			this->Paybtn->TabIndex = 0;
 			this->Paybtn->Text = L"Pay";
 			this->Paybtn->UseVisualStyleBackColor = true;
-			this->Paybtn->Click += gcnew System::EventHandler(this, &MyForm1::Paybtn_Click);
+			this->Paybtn->Click += gcnew System::EventHandler(this, &payWindow::Paybtn_Click);
 			// 
 			// insertbox
 			// 
@@ -103,7 +107,7 @@ namespace BarProject {
 			this->button1->TabIndex = 2;
 			this->button1->Text = L"Exit";
 			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &MyForm1::button1_Click);
+			this->button1->Click += gcnew System::EventHandler(this, &payWindow::button1_Click);
 			// 
 			// label1
 			// 
@@ -113,7 +117,7 @@ namespace BarProject {
 			this->label1->Size = System::Drawing::Size(35, 13);
 			this->label1->TabIndex = 3;
 			this->label1->Text = L"label1";
-			this->label1->Click += gcnew System::EventHandler(this, &MyForm1::label1_Click);
+			this->label1->Click += gcnew System::EventHandler(this, &payWindow::label1_Click);
 			// 
 			// label2
 			// 
@@ -124,7 +128,7 @@ namespace BarProject {
 			this->label2->TabIndex = 4;
 			this->label2->Text = L"Bill:";
 			// 
-			// MyForm1
+			// payWindow
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -134,36 +138,37 @@ namespace BarProject {
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->insertbox);
 			this->Controls->Add(this->Paybtn);
-			this->Name = L"MyForm1";
+			this->Name = L"payWindow";
 			this->Text = L"Pay window";
-			this->Load += gcnew System::EventHandler(this, &MyForm1::MyForm1_Load);
+			this->Load += gcnew System::EventHandler(this, &payWindow::payWindow_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
-	private: System::Void MyForm1_Load(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void payWindow_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
-		  
-	private: System::Void Paybtn_Click(System::Object^ sender, System::EventArgs^ e) {
-		Table* table = bar->GetTable(numOfTable);
-		int bill = table->getOpenBill();
 
-		label1->Text = bill.ToString();
+
+	//	  
+	private: System::Void Paybtn_Click(System::Object^ sender, System::EventArgs^ e) {
+		Table* table = bar->GetTable(numOfTable); // get the table.
+		int bill = table->getOpenBill(); // getting the open bill of the table.
+
+		label1->Text = bill.ToString(); // show the bill
 		String^ sam = insertbox->Text;
 		int num = Int32::Parse(sam);
 		try {
-			bar->closeBill(numOfTable, num);
-		}
+			bar->closeBill(numOfTable, num); //calling the function that clost the bill
+		} 
 		catch(std::exception& err){
 			std::string s = err.what();
 			String^ str = gcnew String(s.c_str());
 			MessageBox::Show(str);
 			return;
 		}
-	//	Table* table = bar->GetTable(numOfTable);
-	//	int bill = table->getOpenBill();
-		 bill = table->getOpenBill();
+		//now set the new bill in the label.
+		bill = table->getOpenBill();
 
 		label1->Text = bill.ToString();
 
@@ -175,7 +180,7 @@ namespace BarProject {
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();
 	}
-private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 	
 }
 };

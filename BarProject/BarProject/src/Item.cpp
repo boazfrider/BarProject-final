@@ -2,10 +2,15 @@
 
 Item::Item(std::string name , int price) : name(name) , price(price) {}
 
-std::string Item::getName() {return name;}
+//return the name of the item.
+std::string Item::getName() {
+    return name;
+}
 
 //return the price of the item
-int Item::getPrice() {return price;}
+int Item::getPrice() {
+    return price;
+}
 
 
 //change the price of the item.
