@@ -418,7 +418,7 @@ namespace BarProject {
 			label7->Text = "0";
 			label8->Text = "0";
 		}
-		
+
 		catch (std::exception& err) {
 			std::string s = err.what();
 			String^ str = gcnew String(s.c_str());
@@ -435,10 +435,7 @@ namespace BarProject {
 		num++;
 		label1->Text = num.ToString();
 		arr_of_amount[0] = num;
-		//indexvector->push_back(0);
-		//std::cout << (*indexvector)[0];
-		//Item it("Half Goldsatr", 25);
-		//bar->addItemToTable(it)
+	
 	}
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ amountstr = label4->Text;
