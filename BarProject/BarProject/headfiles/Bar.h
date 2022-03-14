@@ -1,7 +1,6 @@
 #ifndef _BAR_H
 #define _BAR_H
 
-//more change
 #include<iostream>
 #include<fstream>
 #include<vector>
@@ -44,15 +43,21 @@ class Bar{
     
     //System Functions.
     void welcomePage();
+
     void openNewTable(int num_of_table);
-    //void openNewTable();
-    //void createOrder();
+
     void addItemToTable(int num_of_table , int item_index);
+
     void removeElementFromTable(int num_of_table, int item_index);
+
     void closeBill(int table_number , int amount);
+
     std::string showInfoOfTable(int table_number);
+
     std::string daySummery();
+
     void closeTable(int table_number);
+    
     void closeDay();    
 }; 
  

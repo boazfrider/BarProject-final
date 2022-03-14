@@ -429,6 +429,11 @@ namespace BarProject {
 
 	private: System::Void CreateOrderForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
+
+	/*
+	* Functions that increase the amount of the item when click on it.
+	*addig the new amount to the array of the order
+	*/
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ amountstr = label1->Text;
 		int num = Int32::Parse(amountstr);
@@ -489,6 +494,8 @@ namespace BarProject {
 	private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();
 	}
+
+	//function for removing items for tables.
 	private: System::Void SubBtn_Click(System::Object^ sender, System::EventArgs^ e) {
 		try {
 			for (int i = 0; i < 8; i++)
