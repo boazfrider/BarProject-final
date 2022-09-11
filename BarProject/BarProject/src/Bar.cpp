@@ -32,9 +32,8 @@ std::map<int , Item> Bar::getMenu(){
     return menu;
 }
 
-
+//default constructor - open 20 tables.
 Bar::Bar(){
-   
     for(int i=0 ; i<20 ; i++)
     {
         Table* table=new Table(i+1);
@@ -59,7 +58,9 @@ Bar::Bar(int num_of_tables_to_open){
     menu=setMenu();
 }
 Bar::~Bar(){
-
+    for(int i=0 ; i<tables.size() ; i++){
+        delete tables[i];
+    }
 }
 
 int Bar::getTotalIncome(){

@@ -2,6 +2,7 @@
 
 Item::Item(std::string name , int price) : name(name) , price(price) {}
 
+
 //return the name of the item.
 std::string Item::getName() {
     return name;

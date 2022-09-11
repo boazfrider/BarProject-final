@@ -67,7 +67,7 @@ namespace BarProject {
 	private:
 		int numOfTable;
 		Bar* bar;
-		int* arr_of_amount;
+		int* arr_of_amount; // array of amount of items. the index of the array represent the code of the item.
 		bool sub_flag; //if true- sub , if false- add
 		std::vector<Item>* indexvector;
 	private: System::Windows::Forms::Button^ button1;

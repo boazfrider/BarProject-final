@@ -6,7 +6,10 @@ Table::Table(int table_number):table_number(table_number){
     table_catch=false;
 }
 Table::~Table(){
-
+    for(int i=0;i<items.size();i++)
+    {
+        delete items[i];
+    }
 }
 
 int Table::getTabelNumber(){ 

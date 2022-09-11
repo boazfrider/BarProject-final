@@ -17,9 +17,6 @@ class Bar{
         std::vector<Table*> tables;
         std::map<int , Item> menu;
 
-       
-
-
     public:
     Bar(); 
     Bar(int num_of_tables_to_open);
@@ -35,7 +32,7 @@ class Bar{
     std::map<int , Item> getMenu();
 
 
-    //static function - only function for inside use.
+    // function - only function for inside use.
     void checkValidTableNum(int num_of_table);
     void checkTableIsOpen(int num_of_table);
     void addTototalIncome(int amount_to_add);
